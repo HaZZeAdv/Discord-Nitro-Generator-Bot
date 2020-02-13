@@ -25,6 +25,7 @@ client.on("message", async message => {
   const args = message.content.slice(prefix.length).trim().split(/ +/g);
   const command = args.shift().toLowerCase();
   if(message.channel.id == "677485182470717440") {
+	console.log("Work");
     if(isNaN(message.content)) {
        message.delete();
     }
