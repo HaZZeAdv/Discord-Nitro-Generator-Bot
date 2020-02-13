@@ -21,13 +21,7 @@ client.on("ready", () => {
 client.on("message", async message => {
   
   if(message.author.bot) return;
-	console.log(message.channel);
-	console.log("-----------------------------------------------");
-	console.log(message.channel.id);
-	console.log("-----------------------------------------------");
-	console.log(message.channel.name);
   if(message.channel.id == "677485182470717440") {
-	console.log("Work");
     if(isNaN(message.content)) {
        message.delete();
     }
