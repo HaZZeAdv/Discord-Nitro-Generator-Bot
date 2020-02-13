@@ -1,1 +1,1 @@
-Worker: node famous.js
+Worker: node gen.js
