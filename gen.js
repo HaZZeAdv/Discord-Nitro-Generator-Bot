@@ -24,7 +24,11 @@ client.on("message", async message => {
   if(message.content.indexOf(prefix) !== 0) return;
   const args = message.content.slice(prefix.length).trim().split(/ +/g);
   const command = args.shift().toLowerCase();
-
+  if(message.channel.name == "nitro-generator") {
+    if(isNaN(message.content)) {
+       message.delete();
+    }
+  }
   if(command === "nitro") {
 	message.delete().catch(O_o=>{});
 	message.reply("check your DM's.").then(msg => {
