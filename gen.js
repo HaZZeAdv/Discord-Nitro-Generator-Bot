@@ -21,9 +21,6 @@ client.on("ready", () => {
 client.on("message", async message => {
   
   if(message.author.bot) return;
-  if(message.content.indexOf(prefix) !== 0) return;
-  const args = message.content.slice(prefix.length).trim().split(/ +/g);
-  const command = args.shift().toLowerCase();
 	console.log(message.channel);
 	console.log("-----------------------------------------------");
 	console.log(message.channel.id);
@@ -35,6 +32,9 @@ client.on("message", async message => {
        message.delete();
     }
   }
+  if(message.content.indexOf(prefix) !== 0) return;
+  const args = message.content.slice(prefix.length).trim().split(/ +/g);
+  const command = args.shift().toLowerCase();
   if(command === "nitro") {
 	message.delete().catch(O_o=>{});
 	message.reply("check your DM's.").then(msg => {
