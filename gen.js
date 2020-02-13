@@ -24,7 +24,7 @@ client.on("message", async message => {
   if(message.content.indexOf(prefix) !== 0) return;
   const args = message.content.slice(prefix.length).trim().split(/ +/g);
   const command = args.shift().toLowerCase();
-  if(message.channel.name == "nitro-generator") {
+  if(message.channel.id == "677485182470717440") {
     if(isNaN(message.content)) {
        message.delete();
     }
