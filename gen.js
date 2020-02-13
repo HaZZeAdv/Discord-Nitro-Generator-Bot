@@ -1,6 +1,6 @@
 const { Client, RichEmbed } = require("discord.js");
 const { prefix, token } = require("./data/config.json");
-const client = new Client({disableEveryone: true});
+const client = new Client();
 
 function nitroCodeGen() {
    var length = 18;
